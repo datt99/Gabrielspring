@@ -14,13 +14,16 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import {AppContainerComponent} from './app-container/app-container.component';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignInComponent,
     UsersComponent,
-    TeamsComponent
+    TeamsComponent,
+    AppContainerComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,8 @@ import {MatButtonModule} from '@angular/material/button';
     MatIconModule,
     MatButtonModule,
     ReactiveFormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
