@@ -12,6 +12,10 @@ export class UsersService {
   constructor(private http: HttpClient) {
   }
 
+  public signIn(email: string, password: string) {
+    return this.http.post<{ id: number, rol: string, name: string }>('http://localhost:9001/auth', {email, password}).toPromise();
+  }
+
   public createUser(user: User) {
     return this.http.post<User>(url, user).toPromise();
   }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-app-container',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppContainerComponent implements OnInit {
 
-  constructor() { }
+  userData: { name: string, rol: string } = JSON.parse(sessionStorage.getItem('user'));
+
+  constructor(private route: Router) {
+  }
 
   ngOnInit() {
   }
 
+  signOut() {
+    sessionStorage.removeItem('user');
+    this.route.navigate(['/login']);
+  }
 }

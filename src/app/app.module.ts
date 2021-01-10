@@ -16,6 +16,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {AppContainerComponent} from './app-container/app-container.component';
 import {MatTabsModule} from '@angular/material/tabs';
+import {AuthGuardService} from './AuthGuardService';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,7 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatSnackBarModule,
     MatTabsModule
   ],
-  providers: [],
+  providers: [AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -1,0 +1,18 @@
+.sing_in_container {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.icon-display{
+  font-size: 10rem;
+  width: 10rem;
+}

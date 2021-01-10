@@ -7,6 +7,7 @@ export interface User {
   id: number;
   name: string;
   email: string;
+  password?: string;
 }
 
 @Component({
@@ -86,7 +87,7 @@ export class UsersComponent implements OnInit {
     }
 
     const value = this.formGroup.value;
-    this.usersService.createUser({name: value.name, email: value.email, id: 0}).then(
+    this.usersService.createUser({name: value.name, email: value.email, password: value.password, id: 0}).then(
       response => {
         this.users.push(response);
         this.dataSource = new MatTableDataSource<User>(this.users);
